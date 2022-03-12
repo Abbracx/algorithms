@@ -27,4 +27,15 @@ def is_anagram(s1, s2):
         if key not in freq2.keys() or freq1[key] != freq2[key]:  return False
     return True
 
+'''
+Two anagrams have the same lexicographical sorted string.
+e.g: 
+sorted(salesman) == aelmnss
+sorted(nameless) == aelmnss
+'''
+def isAnagram(s1, s2):
+    if len(s1) != len(s2): return False
+    return sorted(s1) == sorted(s2)
+
 print(is_anagram('danger','garden'))
+print(isAnagram('danger','garden'))
